@@ -3,15 +3,15 @@ import Link from 'next/link'
 
 import { User } from '../../interfaces'
 import { sampleUserData } from '../../utils/sample-data'
-import Layout from '../../components/Layout'
 import List from '../../components/List'
 
 type Props = {
   items: User[]
+  title: string
 }
 
 const WithStaticProps = ({ items }: Props) => (
-  <Layout title="Users List | Next.js + TypeScript Example">
+  < >
     <h1>Users List</h1>
     <p>
       Example fetching data from inside <code>getStaticProps()</code>.
@@ -23,7 +23,7 @@ const WithStaticProps = ({ items }: Props) => (
         <a>Go home</a>
       </Link>
     </p>
-  </Layout>
+  </>
 )
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -31,7 +31,12 @@ export const getStaticProps: GetStaticProps = async () => {
   // Don't forget to include the respective types for any props passed into
   // the component.
   const items: User[] = sampleUserData
-  return { props: { items } }
+  return {
+    props: {
+      items,
+      title: "Users List | Next.js + TypeScript Example"
+    }
+  }
 }
 
 export default WithStaticProps
