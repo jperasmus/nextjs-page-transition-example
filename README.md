@@ -1,12 +1,14 @@
-# TypeScript Next.js example
+# Next.js page transition example
 
 This is a really simple project that shows the usage of Next.js with TypeScript.
+
+# [Demo](https://nextjs-page-transition-example.vercel.app)
 
 ## Deploy your own
 
 Deploy the example using [Vercel](https://vercel.com):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/jperasmus/nextjs-page-transition-example)
 
 ## How to use it?
 
